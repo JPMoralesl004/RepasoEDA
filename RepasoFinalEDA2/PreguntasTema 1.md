@@ -1,6 +1,4 @@
-# Preguntas de Repaso Tema 1
-
-## Estructura de datos
+# Estructura de datos
 
 ## ArrayDeque
 
