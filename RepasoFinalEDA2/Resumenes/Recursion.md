@@ -1,0 +1,55 @@
+# Recursion
+
+---
+
+## Ascenso vs Descenso en Recursión
+
+### ¿Qué es la recursión en descenso?
+
+* Se ejecuta el **trabajo principal antes** de hacer la llamada recursiva.
+* Comienza por los casos más grandes y se va acercando al caso base.
+* Ejemplo clásico: imprimir los elementos de un array desde el primero hasta el último.
+
+```java
+void printForward(int[] arr, int index) {
+    if (index >= arr.length) return;
+    System.out.println(arr[index]); // Acción antes
+    printForward(arr, index + 1);
+}
+```
+
+---
+
+### ¿Qué es la recursión en ascenso?
+
+* Se ejecuta el **trabajo principal después** de la llamada recursiva.
+* Primero llega al caso base, y luego va resolviendo de regreso.
+* Ejemplo clásico: invertir una cadena o calcular la suma total de un array.
+
+```java
+void printBackward(int[] arr, int index) {
+    if (index >= arr.length) return;
+    printBackward(arr, index + 1);  // Llamada antes
+    System.out.println(arr[index]); // Acción después
+}
+```
+
+---
+
+### ¿Cuáles son las diferencias clave entre recursión en ascenso y en descenso?
+
+| Característica     | Ascenso                              | Descenso                              |
+| ------------------ | ------------------------------------ | ------------------------------------- |
+| Orden de ejecución | Trabajo después de la recursión      | Trabajo antes de la recursión         |
+| Flujo de pila      | Primero profundidad, luego retorno   | Comienza con trabajo, luego sigue     |
+| Común en           | Problemas que se resuelven al volver | Problemas secuenciales o acumulativos |
+| Ejemplo típico     | Inversión de cadena, suma acumulada  | Imprimir valores en orden             |
+
+---
+
+### ¿Cuándo usar cada una?
+
+* **Ascenso**: cuando se necesita acumular información de regreso (ej. invertir, calcular, concatenar).
+* **Descenso**: cuando se necesita hacer algo en el camino hacia el caso base (ej. impresión, validaciones tempranas).
+
+---
