@@ -97,13 +97,13 @@ Desventajas:
 
 ---
 
-## Preguntas Examen
+## Posibles Preguntas Examen
 
 - define los criterios para que en un caso de recursividad no se llegue a desborbamiento de la pila
 
 **Respuesta:** 
 
-### ✅ **Criterios clave**
+### **Criterios clave**
 
 1. **Caso base definido**
 
@@ -125,10 +125,32 @@ Desventajas:
 
    * A veces un `for` o `while` es más seguro y eficiente.
 
-### 🔎 ¿Cómo saber si hay riesgo de `StackOverflowError`?
+---
 
-* Llamadas recursivas sobre datos grandes sin un buen caso base.
-* Procesar listas muy largas (como árboles o grafos muy profundos).
-* Falta de validación en entradas del usuario.
+- Cuales son las diferencias entre poner final a un atributo primitivo, un string, un objeto, una clase o un metodo
+
+**Respuesta:**
+
+1. **Atributo primitivo**
+
+* **No se puede cambiar su valor** una vez asignado.
+
+2. **String**
+
+* **No se puede cambiar la referencia** al objeto `String`.
+* El contenido ya es **inmutable por diseño**, con o sin `final`.
+
+3. **Objeto (no String)**
+
+* **No se puede cambiar la referencia** al objeto.
+* **Sí se puede modificar** su estado interno (atributos).
+
+4. **Método**
+
+* **No se puede sobrescribir** en una subclase.
+
+5. **Clase**
+
+* **No se puede extender** mediante herencia.
 
 ---
