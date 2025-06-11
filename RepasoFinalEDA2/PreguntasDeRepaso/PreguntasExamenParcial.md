@@ -1,5 +1,7 @@
 # Solución al examen parcial
 
+---
+
 ## Preguntas:
 
 ### Hacer un resumen esquemático de la asignatura
@@ -33,3 +35,5 @@
 - Complejidad temporal de O(n²)
 - Funcionamiento "in-place"
 - Esquema del "burbujeo"
+
+---
