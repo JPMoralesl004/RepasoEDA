@@ -1,5 +1,65 @@
 # Recursividad
 
+## ¿Qué es la recursividad?
+
+La recursividad es una técnica de programación donde una función se llama a sí misma para resolver un problema. 
+
+Se utiliza para dividir problemas grandes en subproblemas más pequeños, más fáciles de manejar.
+
+### ¿Para qué sirve?
+
+* Resolver problemas naturalmente jerárquicos o repetitivos.
+* Es útil en:
+  - Estructuras de datos recursivas (como árboles o grafos)
+  - Problemas de combinatoria
+  - Algoritmos de búsqueda, recorrido, y generación
+ 
+### ¿Cuáles son las principales ventajas y desventajas del uso de recursividad frente a soluciones iterativas?
+
+**Ventajas:**
+- Código más limpio y expresivo para problemas como árboles, backtracking, combinatoria.
+- Divide naturalmente el problema en subproblemas.
+
+**Desventajas:**
+- Mayor consumo de memoria (por pila de llamadas).
+- Riesgo de StackOverflowError.
+- No se optimiza la recursión de cola.
+
+### ¿Qué es el caso base y por qué es esencial en una función recursiva?
+
+- El caso base es la condición que detiene la recursión.
+- Es esencial para evitar recursión infinita y para retornar un valor conocido con el cual construir la solución final.
+
+*Ejemplo:*
+
+```java
+
+int factorial(int n) {
+    if (n == 0) return 1; // caso base
+    return n * factorial(n - 1); // paso recursivo
+}
+
+```
+
+### ¿Cómo puede afectar la recursividad al rendimiento y uso de memoria de un programa?
+
+- Cada llamada recursiva se guarda en la pila de ejecución, lo que consume más memoria.
+- Puede causar desbordamientos de pila si hay muchas llamadas anidadas.
+- El rendimiento puede ser peor que una solución iterativa si se recalculan subproblemas (a menos que se use memoización).
+
+### ¿En qué tipos de problemas es más recomendable usar recursión que iteración?
+
+- Cuando el problema tiene estructura recursiva:
+  - Estructuras como árboles y grafos
+  - Backtracking (sudoku, laberintos)
+  - Problemas como combinaciones, permutaciones, división y conquista (merge sort, quicksort)
+
+### ¿Qué condiciones debe cumplir una función para ser considerada recursiva y funcionar correctamente?
+
+- Debe llamarse a sí misma (condición de recursividad).
+- Debe tener un caso base definido, que detenga la recursión.
+- Debe acercarse al caso base en cada llamada para evitar ciclos infinitos.
+
 ## Suma de números en un array
 
 ### ¿Cómo funciona la recursividad para sumar los números de un array?
