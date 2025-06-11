@@ -1,3 +1,5 @@
+# Recursividad
+
 ## Suma de números en un array
 
 ### ¿Cómo funciona la recursividad para sumar los números de un array?
@@ -132,5 +134,52 @@
 * Evitar llamadas innecesarias.
 * Usar **recursión de cola** si es posible.
 * Reescribir en forma iterativa si hay riesgo de stack overflow.
+
+---
+
+## Ascenso vs Descenso en Recursión
+
+---
+
+### ¿Cuál es la diferencia fundamental entre recursión en ascenso y recursión en descenso?
+
+* **Recursión en descenso:** realiza el trabajo antes de la llamada recursiva.
+→ Se ejecuta desde el caso más general hacia el base.
+* **Recursión en ascenso:** realiza el trabajo después de la llamada recursiva.
+→ El flujo baja hasta el caso base y luego sube resolviendo.
+* En términos de pila, el descenso "baja haciendo cosas", el ascenso "sube resolviendo".
+
+---
+
+### ¿En qué tipo de problemas es más útil usar recursión en ascenso en lugar de en descenso?
+
+* En problemas donde el resultado final **depende del retorno** de las llamadas recursivas.
+* Ejemplos:
+
+  * Invertir una cadena.
+  * Calcular una suma total.
+  * Construir estructuras desde el final (como un árbol binario desde las hojas hacia la raíz).
+
+---
+
+### ¿Cómo afecta el orden de ejecución (antes o después de la llamada recursiva) al comportamiento del algoritmo?
+
+* **En descenso**, los efectos se ven inmediatamente mientras baja la pila (útil para tareas como imprimir en orden).
+* **En ascenso**, los efectos se acumulan y se ejecutan al regresar por la pila (útil para acumulaciones o inversiones).
+* El orden cambia la lógica y el flujo del resultado, incluso si la estructura general parece similar.
+
+---
+
+### Da un ejemplo práctico donde la recursión en descenso sea preferida y otro donde la de ascenso sea obligatoria.
+
+* **Descenso preferido**:
+
+  * Imprimir elementos de un array del primero al último.
+  * Validar una condición en cada paso antes de seguir (como cortar una búsqueda).
+
+* **Ascenso obligatorio**:
+
+  * Construir una cadena invertida.
+  * Evaluar una expresión que depende de los resultados previos (como una suma acumulativa).
 
 ---
