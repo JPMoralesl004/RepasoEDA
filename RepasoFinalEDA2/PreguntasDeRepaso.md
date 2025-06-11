@@ -1,7 +1,5 @@
 # Preguntas de Repaso Tema 1
 
-## Ejemplos
-
 ## Estructura de datos
 
 ## ArrayDeque
