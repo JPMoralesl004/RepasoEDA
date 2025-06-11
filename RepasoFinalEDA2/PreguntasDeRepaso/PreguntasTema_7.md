@@ -1,5 +1,7 @@
 # Busqueda
 
+---
+
 ## Conceptos Básicos de Búsqueda
 
 ### ¿Cuál es la diferencia entre búsqueda exacta y búsqueda aproximada?
