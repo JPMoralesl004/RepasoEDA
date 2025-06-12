@@ -1,5 +1,62 @@
 # Recursividad
 
+---
+
+## Preguntas Generales
+
+### 1. ¿Qué es la recursividad y para qué sirve?
+
+* **Recursividad** es una técnica de programación donde una función se llama a sí misma para resolver un problema dividiéndolo en subproblemas más pequeños del mismo tipo.
+* Se utiliza cuando:
+
+  * El problema se puede dividir en subproblemas similares.
+  * La solución se expresa naturalmente de forma recursiva (como estructuras jerárquicas o problemas matemáticos).
+* Ejemplos clásicos: factorial, Fibonacci, recorridos en árboles, torres de Hanoi.
+
+---
+
+### 2. ¿Qué elementos esenciales debe tener una función recursiva?
+
+* **Caso base**: condición que detiene la recursión. Evita el ciclo infinito.
+* **Llamada recursiva**: la función se llama a sí misma con una entrada modificada.
+* **Progreso hacia el caso base**: cada llamada se acerca al caso base.
+
+```java
+int factorial(int n) {
+    if (n == 0) return 1; // caso base
+    return n * factorial(n - 1); // llamada recursiva
+}
+```
+
+---
+
+### 3. ¿Qué ventajas ofrece la recursividad frente a la iteración?
+
+* Código más limpio, conciso y fácil de entender para problemas que tienen naturaleza recursiva (por ejemplo, estructuras de árbol, backtracking).
+* Permite resolver problemas de forma más natural y expresiva.
+
+---
+
+### 4. ¿Cuáles son los riesgos o desventajas del uso de la recursividad?
+
+* **Uso de memoria adicional**: cada llamada recursiva se apila en la pila de llamadas.
+* **StackOverflowError**: si no hay un caso base claro o se hacen demasiadas llamadas sin terminar.
+* Menor rendimiento frente a soluciones iterativas en algunos contextos.
+
+---
+
+### 5. ¿En qué casos conviene evitar la recursividad?
+
+* Cuando el problema se puede resolver de forma más eficiente usando bucles.
+* Si el número de llamadas puede crecer mucho y causar desbordamiento de pila.
+* En sistemas donde el consumo de memoria o el rendimiento es crítico.
+
+---
+
+¿Te gustaría extender esto a ejemplos comparativos entre recursión e iteración, o explorar temas como recursión de cola, memoización, o problemas clásicos resueltos recursivamente?
+
+---
+
 ## ¿Qué es la recursividad?
 
 La recursividad es una técnica de programación donde una función se llama a sí misma para resolver un problema. 
