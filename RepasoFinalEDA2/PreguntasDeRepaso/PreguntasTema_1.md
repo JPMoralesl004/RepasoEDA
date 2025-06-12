@@ -1,5 +1,64 @@
 # Estructura de datos
 
+---
+
+## Preguntas Generales sobre Estructuras de Datos
+
+### 1. ¿Qué es una estructura de datos y por qué es importante?
+
+* Una **estructura de datos** es una forma organizada de almacenar y organizar datos en la memoria de un computador para que puedan ser utilizados de manera eficiente. Son fundamentales porque:
+
+  * Permiten acceder y modificar datos de manera óptima.
+  * Son la base de los algoritmos.
+  * Facilitan la resolución eficiente de problemas complejos.
+  * Mejoran el rendimiento y escalabilidad de sistemas y aplicaciones.
+
+---
+
+### 2. ¿Cómo se clasifican las estructuras de datos?
+
+* Se pueden clasificar en:
+
+  * **Lineales**: datos en secuencia. Ej: Arrays, Listas, Pilas, Colas.
+  * **No lineales**: datos con relaciones jerárquicas o de red. Ej: Árboles, Grafos.
+  * **Estáticas**: tamaño fijo. Ej: Arrays.
+  * **Dinámicas**: tamaño variable. Ej: Listas enlazadas.
+  * **Homogéneas** (mismos tipos de datos) vs **heterogéneas** (distintos tipos).
+
+---
+
+### 3. ¿Qué criterios se deben considerar al elegir una estructura de datos?
+
+* Algunos criterios clave son:
+
+  * **Tipo de operación predominante** (búsqueda, inserción, eliminación).
+  * **Frecuencia de acceso vs actualización**.
+  * **Memoria disponible**.
+  * **Necesidad de ordenamiento**.
+  * **Tiempo de ejecución aceptable** (complejidad).
+
+---
+
+### 4. ¿Cuál es la diferencia entre estructuras abstractas y estructuras concretas?
+
+* Una **estructura de datos abstracta (ADT)** es una descripción lógica o conceptual de cómo se debe comportar una colección de datos (por ejemplo, una pila, una cola, un mapa).
+* Una **estructura concreta** es la implementación específica de una ADT en un lenguaje de programación (por ejemplo, `ArrayList`, `LinkedList`, `HashMap` en Java).
+
+---
+
+### 5. ¿Qué papel juega la complejidad algorítmica en el uso de estructuras de datos?
+
+* La **complejidad algorítmica** mide el tiempo y espacio que un algoritmo necesita según la entrada.
+* Las estructuras de datos impactan directamente en dicha complejidad. Por ejemplo:
+
+  * Búsqueda en un array desordenado: O(n)
+  * Búsqueda en una tabla hash: O(1) promedio
+  * Inserción en una lista enlazada: O(1)
+  * Inserción en un array: O(n)
+* Elegir la estructura adecuada permite mantener la complejidad bajo control y optimizar los recursos.
+
+---
+
 ## ArrayDeque
 
 ### - ¿Cuáles son las ventajas de usar `ArrayDeque` sobre `LinkedList` para implementar colas y pilas?**
