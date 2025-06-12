@@ -147,3 +147,124 @@ void postorden(Nodo nodo) {
 un simple cambio en el orden de las operaciones produce secuencias completamente diferentes, cada una con aplicaciones específicas.
 
 Esta flexibilidad en la organización de las operaciones recursivas es precisamente lo que hace tan poderosa esta técnica, y constituye la base para entender métodos más avanzados como el **[backtracking](Backtracking.md)**, donde el orden en que se construyen, verifican y descartan soluciones determina la eficiencia y el comportamiento del algoritmo.
+
+---
+
+## Ejemplos:
+
+---
+
+## Árbol binario de ejemplo
+
+Representamos el siguiente árbol binario:
+
+```
+        A
+       / \
+      B   C
+     / \   \
+    D   E   F
+```
+
+---
+
+## **Recorrido Preorden (raíz – izquierda – derecha)**
+
+### Orden de visita:
+
+1. Visitar la raíz
+2. Recorrer subárbol izquierdo en preorden
+3. Recorrer subárbol derecho en preorden
+
+### Resultado:
+
+```
+A → B → D → E → C → F
+```
+
+### Código (Java):
+
+```java
+void preorden(Nodo nodo) {
+    if (nodo == null) return;
+    System.out.print(nodo.valor + " ");
+    preorden(nodo.izquierda);
+    preorden(nodo.derecha);
+}
+```
+
+---
+
+## **Recorrido Inorden (izquierda – raíz – derecha)**
+
+### Orden de visita:
+
+1. Recorrer subárbol izquierdo en inorden
+2. Visitar la raíz
+3. Recorrer subárbol derecho en inorden
+
+### Resultado:
+
+```
+D → B → E → A → C → F
+```
+
+### Código (Java):
+
+```java
+void inorden(Nodo nodo) {
+    if (nodo == null) return;
+    inorden(nodo.izquierda);
+    System.out.print(nodo.valor + " ");
+    inorden(nodo.derecha);
+}
+```
+
+---
+
+## **Recorrido Postorden (izquierda – derecha – raíz)**
+
+### Orden de visita:
+
+1. Recorrer subárbol izquierdo en postorden
+2. Recorrer subárbol derecho en postorden
+3. Visitar la raíz
+
+### Resultado:
+
+```
+D → E → B → F → C → A
+```
+
+### Código (Java):
+
+```java
+void postorden(Nodo nodo) {
+    if (nodo == null) return;
+    postorden(nodo.izquierda);
+    postorden(nodo.derecha);
+    System.out.print(nodo.valor + " ");
+}
+```
+
+---
+
+## ¿Por qué importa el orden?
+
+El orden en la recursividad importa porque:
+
+- Determina **cuándo se procesan los datos**: antes o después de la llamada recursiva.
+- Afecta el **tipo de problema que puedes resolver:** por ejemplo, algunas tareas requieren hacer trabajo **antes** de la llamada recursiva (preorden), otras después (postorden).
+- Controla el uso de la **pila de llamadas** (stack), y por lo tanto puede afectar el **rendimiento y el consumo de memoria.**
+
+---
+
+## Tipos comunes según el orden:
+
+| Tipo de orden | Qué se hace primero                          | Ejemplo clásico                           |
+| ------------- | -------------------------------------------- | ----------------------------------------- |
+| **Preorden**  | Procesar, luego llamar recursivamente        | Recorrido preorden en árboles             |
+| **Inorden**   | Llamada izquierda, procesar, llamada derecha | Árboles binarios de búsqueda              |
+| **Postorden** | Llamar recursivamente, luego procesar        | Eliminación de nodos, evaluar expresiones |
+
+---
