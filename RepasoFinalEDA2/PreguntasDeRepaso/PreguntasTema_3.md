@@ -53,10 +53,6 @@ int factorial(int n) {
 
 ---
 
-¿Te gustaría extender esto a ejemplos comparativos entre recursión e iteración, o explorar temas como recursión de cola, memoización, o problemas clásicos resueltos recursivamente?
-
----
-
 ## ¿Qué es la recursividad?
 
 La recursividad es una técnica de programación donde una función se llama a sí misma para resolver un problema. 
