@@ -2,7 +2,7 @@
 
 ---
 
-## Preguntas Generales sobre Algoritmos
+## Preguntas Generales
 
 ### 1. ¿Qué es un algoritmo y cuáles son sus características esenciales?
 
