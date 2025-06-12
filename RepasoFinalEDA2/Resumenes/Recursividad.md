@@ -198,12 +198,7 @@ spam is Ant
 </tr>
 </table>
 
-|![](/images/callStack.webp)
-|:-:
-|El estado de la pila de llamadas mientras se ejecuta el programa `Example.java`
-|![](/images/callStackOverflow.webp)
-|Un desbordamiento de pila ocurre cuando la pila de llamadas se vuelve demasiado alta y demasiados objetos *marco* ocupan la memoria.
-
+*Un desbordamiento de pila ocurre cuando la pila de llamadas se vuelve demasiado alta y demasiados objetos *marco* ocupan la memoria.*
 
 <table>
 <tr>
