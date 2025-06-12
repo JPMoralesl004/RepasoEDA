@@ -1,5 +1,62 @@
 # Algoritmos
 
+---
+
+## Preguntas Generales sobre Algoritmos
+
+### 1. ¿Qué es un algoritmo y cuáles son sus características esenciales?
+
+* Un **algoritmo** es un conjunto finito y ordenado de instrucciones que resuelven un problema específico o realizan una tarea.
+* Características:
+
+  * **Finito**: termina después de un número limitado de pasos.
+  * **Definido**: cada paso es claro y no ambiguo.
+  * **Entradas**: cero o más.
+  * **Salidas**: al menos una.
+  * **Efectivo**: cada paso se puede ejecutar en tiempo finito con recursos razonables.
+
+---
+
+### 2. ¿Qué diferencia hay entre un algoritmo y un programa?
+
+* Un **algoritmo** es una idea abstracta (el "cómo" resolver un problema).
+* Un **programa** es la implementación concreta de un algoritmo en un lenguaje de programación específico.
+* Ejemplo: Un algoritmo de ordenamiento puede expresarse como QuickSort, y el programa sería su implementación en Java, Python, etc.
+
+---
+
+### 3. ¿Qué es la complejidad algorítmica y qué tipos existen?
+
+* La **complejidad algorítmica** mide el uso de recursos (tiempo y/o espacio) en función del tamaño de la entrada.
+* Tipos:
+
+  * **Complejidad temporal**: cuánto tarda en ejecutarse.
+  * **Complejidad espacial**: cuánta memoria consume.
+* Se expresa comúnmente con notación Big-O: O(1), O(n), O(log n), O(n²), etc.
+
+---
+
+### 4. ¿Cómo se evalúa la eficiencia de un algoritmo?
+
+* Mediante:
+
+  * **Análisis de casos**: peor caso, mejor caso, caso promedio.
+  * **Big-O** (notación asintótica).
+  * **Benchmarking**: pruebas prácticas de tiempo y memoria en distintos inputs.
+  * Comparando con otros algoritmos que resuelven el mismo problema.
+
+---
+
+### 5. ¿Cuál es la importancia de la recursividad e iteración en los algoritmos?
+
+* Ambas son formas de repetir operaciones:
+
+  * **Recursividad**: el algoritmo se llama a sí mismo. Ideal para problemas que se resuelven naturalmente dividiéndose en subproblemas (ej. árboles, torres de Hanoi).
+  * **Iteración**: usa estructuras como bucles (`for`, `while`). Es más eficiente en consumo de memoria que la recursión en muchos casos.
+* La elección depende del problema, la claridad del código y la eficiencia.
+
+---
+
 ## sumArray
 
 ### ¿Cómo funciona el algoritmo `sumArray` para sumar todos los elementos de un arreglo?
