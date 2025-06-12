@@ -30,6 +30,23 @@ Usa **backtracking** cuando:
 * Hay muchas posibles soluciones y necesitas encontrar **una, todas o la mejor**.
 * No se puede usar un algoritmo directo o codicioso porque hay que considerar más de una opción por paso.
 
+### Elementos fundamentales
+
+- **Estado parcial**: Representación de una solución parcial o incompleta al problema.
+- **Restricciones**: Condiciones que deben cumplirse para que una solución sea válida.
+- **Verificación de validez**: Mecanismo para determinar si un estado parcial puede extenderse a una solución válida.
+- **Mecanismo de retroceso**: Proceso de abandonar un camino de exploración cuando se determina que no conducirá a una solución válida.
+
+### Estructura general
+
+Todo algoritmo de backtracking sigue una estructura recursiva con estos componentes:
+
+1. **Verificación de caso base**: Determinar si se ha alcanzado una solución completa.
+2. **Generación de candidatos**: Identificar las posibles extensiones del estado actual.
+3. **Verificación de restricciones**: Comprobar si una extensión particular viola alguna restricción.
+4. **Recursión con estado modificado**: Avanzar recursivamente con la extensión seleccionada.
+5. **Retroceso**: Deshacer modificaciones y probar otras alternativas cuando una rama no lleva a solución.
+
 ---
 
 ## ¿Para qué sirve?
@@ -41,6 +58,18 @@ Es útil en problemas como:
 * Resolver el problema de las **N reinas** (colocar reinas en un tablero sin que se ataquen).
 * Generar **combinaciones o permutaciones** (como contraseñas posibles).
 * Resolver rompecabezas o juegos de lógica.
+
+### Diferencia con otras técnicas recursivas
+
+El backtracking se distingue de la recursividad simple por:
+
+|Característica|Recursividad simple|Backtracking|
+|-|-|-|
+|Enfoque|Divide el problema en casos más pequeños|Construye soluciones incrementalmente y prueba alternativas|
+|Ramificación|Generalmente fija|Dinámica, se reduce mediante poda|
+|Exploración|Completa todo el árbol recursivo|Abandona ramas tan pronto como se detectan como inviables|
+|Uso de estado|Generalmente no mantiene estado entre llamadas|Mantiene y actualiza estado para rastrear soluciones parciales|
+|Caso típico|Cálculos matemáticos como factorial o Fibonacci|Problemas de restricciones como N-Reinas o coloración de grafos|
 
 ---
 
@@ -70,7 +99,7 @@ void resolver(int fila) {
 
 ---
 
-## ✅ Ventajas del backtracking
+## ✅ Ventajas
 
 * Es una solución general y elegante para muchos problemas complejos.
 * Encuentra todas las soluciones si se programa correctamente.
