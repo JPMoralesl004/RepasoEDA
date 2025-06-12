@@ -1,3 +1,5 @@
+# Estructura de Dato
+
 # Tabla comparativa de estructuras
 
 | Estructura       | Acceso aleatorio | Inserción/Eliminación inicio | Inserción/Eliminación final | Sincronización | Uso ideal                                                                 |
