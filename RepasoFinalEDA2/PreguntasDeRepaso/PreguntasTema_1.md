@@ -2,7 +2,7 @@
 
 ---
 
-## Preguntas Generales sobre Estructuras de Datos
+## Preguntas Generales
 
 ### 1. ¿Qué es una estructura de datos y por qué es importante?
 
