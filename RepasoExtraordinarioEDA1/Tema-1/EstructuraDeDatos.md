@@ -100,6 +100,23 @@ El **funcionamiento de una estructura de datos** depende del tipo que se use, pe
 * Cada elemento se accede mediante un índice, empezando desde 0.
 * **Acceso** rápido, pero **inserción/eliminación** puede ser costosa (hay que mover elementos).
 
+---
+
+*Java*
+
+```java
+public class EjemploArray {
+    public static void main(String[] args) {
+        int[] numeros = {10, 20, 30};
+        System.out.println(numeros[1]);  // Imprime 20
+    }
+}
+```
+
+---
+
+*Python*
+
 ```python
 numeros = [10, 20, 30]
 print(numeros[1])  # Imprime 20
@@ -111,6 +128,36 @@ print(numeros[1])  # Imprime 20
 
 * Cada elemento (nodo) tiene un **valor** y una **referencia al siguiente**.
 * Inserciones/eliminaciones son eficientes, pero el acceso es más lento (hay que recorrer uno por uno).
+
+---
+
+*Java*
+
+```java
+class Nodo {
+    int valor;
+    Nodo siguiente;
+
+    public Nodo(int valor) {
+        this.valor = valor;
+        this.siguiente = null;
+    }
+}
+
+public class ListaEnlazada {
+    public static void main(String[] args) {
+        Nodo n1 = new Nodo(10);
+        Nodo n2 = new Nodo(20);
+        n1.siguiente = n2;
+
+        System.out.println(n1.siguiente.valor);  // Imprime 20
+    }
+}
+```
+
+---
+
+*Python*
 
 ```python
 class Nodo:
@@ -130,6 +177,27 @@ n1.siguiente = n2  # Enlaza n1 con n2
 * Funcionan con el principio **LIFO** (Last In, First Out).
 * Solo puedes agregar o quitar elementos desde el tope.
 
+---
+
+*Java*
+
+```java
+import java.util.Stack;
+
+public class EjemploPila {
+    public static void main(String[] args) {
+        Stack<Integer> pila = new Stack<>();
+        pila.push(1);
+        pila.push(2);
+        System.out.println(pila.pop());  // Imprime 2
+    }
+}
+```
+
+---
+
+*Python*
+
 ```python
 pila = []
 pila.append(1)  # push
@@ -143,6 +211,29 @@ print(pila.pop())  # Imprime 2 (último en entrar, primero en salir)
 
 * Funcionan con el principio **FIFO** (First In, First Out).
 * El primer elemento en entrar es el primero en salir.
+
+---
+
+*Java*
+
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class EjemploCola {
+    public static void main(String[] args) {
+        Queue<Integer> cola = new LinkedList<>();
+        cola.add(1);
+        cola.add(2);
+        System.out.println(cola.poll());  // Imprime 1
+    }
+}
+```
+
+---
+
+*Python*
+
 
 ```python
 from collections import deque
@@ -160,6 +251,36 @@ print(cola.popleft())  # Imprime 1
 * Cada nodo tiene un valor y referencias a uno o más hijos.
 * Muy usados para representar jerarquías y búsquedas rápidas (como árboles binarios de búsqueda).
 
+---
+
+*java*
+
+```java
+class Nodo {
+    int valor;
+    Nodo izq, der;
+
+    public Nodo(int valor) {
+        this.valor = valor;
+        izq = der = null;
+    }
+}
+
+public class ArbolBinario {
+    public static void main(String[] args) {
+        Nodo raiz = new Nodo(10);
+        raiz.izq = new Nodo(5);
+        raiz.der = new Nodo(15);
+
+        System.out.println(raiz.izq.valor);  // Imprime 5
+    }
+}
+```
+
+---
+
+*Python*
+
 ```python
 class Nodo:
     def __init__(self, valor):
@@ -175,6 +296,26 @@ class Nodo:
 * Usan una **clave única** para acceder directamente al valor.
 * Muy rápidos para buscar, insertar o eliminar datos.
 
+---
+
+*Java*
+
+```java
+import java.util.HashMap;
+
+public class EjemploHashMap {
+    public static void main(String[] args) {
+        HashMap<String, Integer> edades = new HashMap<>();
+        edades.put("Ana", 20);
+        edades.put("Luis", 30);
+
+        System.out.println(edades.get("Luis"));  // Imprime 30
+    }
+}
+```
+
+---
+
 ```python
 edades = {"Ana": 20, "Luis": 30}
 print(edades["Luis"])  # Imprime 30
@@ -182,7 +323,7 @@ print(edades["Luis"])  # Imprime 30
 
 ---
 
-### ✅ En resumen:
+### En resumen:
 
 Cada estructura tiene un **mecanismo interno distinto** (uso de índices, punteros, claves, etc.), pero todas permiten realizar operaciones como:
 
